@@ -1,4 +1,4 @@
-import { ITypeProductRepository } from "../repositories/TypeProduct.repository";
+import { ITypeProductRepository } from "../repositories/ITypeProduct.repository";
 import { TypeProductFormAdapter } from "../adapters/typeProduct.adapter";
 import { FormTypeProductDto } from "../dtos/FormTypeProductDto";
 

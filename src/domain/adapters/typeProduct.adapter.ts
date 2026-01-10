@@ -29,6 +29,20 @@ export class TypeProductFormAdapter {
     dto.description = domain.description ?? '';
     return dto;
   }
+  static fromRequest(body: any): FormTypeProductDto {
+    const dto = new FormTypeProductDto();
+    if (!body || typeof body !== 'object') return dto;
+
+    if (body.id !== undefined && body.id !== null) {
+      const n = Number(body.id);
+      dto.id = Number.isFinite(n) ? n : dto.id;
+    }
+
+    if (body.description !== undefined && body.description !== null) {
+      dto.description = String(body.description);
+    }
+    return dto;
+  }
 }
 
 

@@ -1,6 +1,6 @@
 import { TypeProductGetAdapter } from "../adapters/typeProduct.adapter";
 import { GetTypeProductDto } from "../dtos/GetTypeProductDto";
-import { ITypeProductRepository } from "../repositories/TypeProduct.repository";
+import { ITypeProductRepository } from "../repositories/ITypeProduct.repository";
 
 export interface IGetAllTypeProductUsecase{
     execute(): Promise<GetTypeProductDto[]>;

@@ -4,7 +4,8 @@
   "include": ["src"],
   "compilerOptions": {
     // File Layout
-    "rootDir": "src",
+    // "rootDir": "src",
+    "rootDirs": ["src", "generated"],
     "outDir": "dist/",
 
     // Environment Settings
