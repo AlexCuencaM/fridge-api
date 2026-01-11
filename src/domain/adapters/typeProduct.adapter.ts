@@ -11,6 +11,7 @@ export class TypeProductGetAdapter {
 
   static toDto(domain: TypeProduct): GetTypeProductDto {
     const dto = new GetTypeProductDto();
+    dto.id = domain.id;
     dto.description = domain.description ?? '';
     return dto;
   }

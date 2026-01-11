@@ -9,6 +9,7 @@ export class GetNextProductsToExpireUsecase implements IGetNextProductsToExpireU
         private readonly repository: IProductLineRepository
     ){}
     async execute(): Promise<ProductLine[]> {
+        console.log("Executing GetNextProductsToExpireUsecase");
         return await this.repository.getNextProductsToExpire();
     }
 }

@@ -17,8 +17,9 @@ export class ProductLineRoutes{
             getNextToExpireCase,
             createUsecase
         );
-        router.get('/next-to-expire', productLineController.getNextProductsToExpire);
-        router.post('/', productLineController.postAsync);
+
+        router.get('/next-to-expire', (req, res) => productLineController.getNextProductsToExpireAsync(req, res));
+        router.post('/', (req, res) => productLineController.postAsync(req, res));
         return router;
     }
 }

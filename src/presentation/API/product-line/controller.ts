@@ -5,7 +5,9 @@ export class ProductLineController{
         private readonly getProductsToExpireUsecase: IGetNextProductsToExpireUsecase,
         private readonly createProductLineUsecase: ICreateProductLineUsecase
     ){}
-    async getNextProductsToExpire(req: any, res: any){
+    async getNextProductsToExpireAsync(req: any, res: any){
+        console.log("Handling getNextProductsToExpireAsync request");
+        console.log(this.getProductsToExpireUsecase);
         const products =  await this.getProductsToExpireUsecase.execute();
         res.json(products);
     }
