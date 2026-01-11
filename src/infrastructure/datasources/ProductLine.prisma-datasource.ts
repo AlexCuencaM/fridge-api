@@ -26,6 +26,7 @@ export class ProductLinePrismaDatasource implements IProductLineDatasource {
             const productLineDomain = new ProductLine();
             productLineDomain.id = pl.id;
             productLineDomain.ExpiryDate = pl.ExpiryDate;
+            productLineDomain.price = pl.price.toNumber();
             productLineDomain.stock = pl.stock;
             productLineDomain.productId = pl.productId;
 
