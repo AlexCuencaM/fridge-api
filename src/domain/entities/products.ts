@@ -6,4 +6,8 @@ export class Products {
 	productLine: ProductLine[] = [];
 	typeProductId?: number;
 	typeProduct?: TypeProduct;
+    constructor(id: number, name: string) {
+        this.id = id;
+        this.name = name;
+    }
 }

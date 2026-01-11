@@ -5,8 +5,9 @@ export class TypeProductPrismaDatasource implements ITypeProductDatasource {
     constructor(
     ) {}
     async getAllTypeProducts(): Promise<TypeProduct[]> {
-        const typeProducts = await prisma.typeProduct.findMany();        
-        return typeProducts.map(tp => new TypeProduct(tp.id, tp.description));
+        const typeProducts = await prisma.typeProduct.findMany();
+        const result = typeProducts.map(tp => new TypeProduct(tp.id, tp.description));
+        return result;
     }
     async postTypeProduct(typeProduct: TypeProduct): Promise<TypeProduct> {
         const created = await prisma.typeProduct.create({

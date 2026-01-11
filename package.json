@@ -14,7 +14,7 @@
   "author": "Alex Cuenca M",
   "main": "index.js",
   "scripts": {
-    "dev": "tsnd --respawn --clear src/app.ts",
+    "dev": "tsnd --respawn --clear --ignore-watch tmp --ignore-watch generated --ignore-watch dist src/app.ts",
     "build": "rimraf ./dist && tsc",
     "start": "npm run build && node dist/app.js"
   },
