@@ -12,6 +12,4 @@ async function main () {
         routes: AppRoutes.routes,
     });
     await apiServer.start();
-    
-    // await consoleServer.start();
 }
